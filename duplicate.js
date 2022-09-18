@@ -75,19 +75,13 @@ app.listen(7000,()=>{
   console.log("on port 7000 !!!")
 })
 
-// db.wasabiws.aggregate([
-    
-    // {
-    //     $group: {
-    //         _id:{SHA256:"$Sha256"},
-    //         uniqueIds:{$addToSet: "$key"},
-    //         count: { $sum: 1 }
-    //     }
-    // },
-
-    // {
-    //     $match: {
-    //         count: { $gt: 1 }
-    //     }
-    // }
-// ])
+// output show in database
+{
+  "_id": {
+    "$oid": "632202f22574e678792708aa"
+  },
+  "Sha256": "8decc8571946d4cd70a024949e033a2a2a54377fe9f1c1b944c20f9ee11a9e51",
+  "UiqueIds": "140/2022-04-16/d12480cd-c361-413d-9c0e-3178aa7f5a1a/sample.pdf,140/2022-04-13/be1f00e6-851b-411e-87bf-3a5bcb778545/sample.pdf,48/2022-04-15/f69f2422-a089-4de7-a70a-3b1b5ef943ed/sample.pdf,48/2022/06/07/da2d78c8-0587-4b76-be0e-83cb47ac9e1a/file,48/2022-04-10/687802d2-ee90-4779-91ba-f9133f1c671e/file,48/2022-04-10/6e37de50-677c-4890-8a94-b5eb59826c2f/abc.pdf,48/2022-04-12/9f12ddb8-1063-408b-9435-85416aa24ba4/sample.pdf,48/2021/10/02/2d563280-baad-42e6-a5b9-7b9c5d28b5ef/sample.pdf,48/2022-04-10/0eefd200-0fc7-4477-a07f-0e69b3f1c6b0/abc.pdf",
+  "Count": "9",
+  "__v": 0
+}
