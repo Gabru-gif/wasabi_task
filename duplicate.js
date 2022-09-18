@@ -21,7 +21,7 @@ Sha256:String
 })
 const DuplicateSchema=new mongoose.Schema({
 Sha256:String,
-UiqueIds:String,
+UiqueIds: [{type: Schema.Types.Mixed}],
 Count:String
 })
 
@@ -30,8 +30,21 @@ const DuplicateModel=new mongoose.model("Duplicate",DuplicateSchema);
 const newModel= new mongoose.model("wasabiws", NewSchema);
 
 function Duplicate()
+
+/**
+ * sha
+ *  uniqueIds: {
+ *  id: [ {date: 22-09-2010, data: 93785973757 }, {date: 8-7-2002, data: 3984983578}]
+ * }
+ */
 {
 
+  /**
+   * {
+   *  140 : [ {date: 22-09-2010, data: 93785973757 } ]
+   *  141: [{date: 22-09-2010, data: 93785973757 }]
+   * }
+   */
   const Dup= newModel.aggregate([
    {
         $group: {
